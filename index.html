@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Idea Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Content Idea Manager</h1>
+      <p class="subtitle">Organize your content ideas easily</p>
+    </header>
+
+    <!-- Add / Edit Form -->
+    <section class="card form-card">
+      <h2 id="formTitle">Add New Idea</h2>
+
+      <div class="form-grid">
+        <input type="text" id="ideaTitle" placeholder="Idea title..." />
+
+        <select id="ideaType">
+          <option value="Video">Video</option>
+          <option value="Blog">Blog</option>
+          <option value="Post">Post</option>
+        </select>
+
+        <select id="ideaStatus">
+          <option value="Draft">Draft</option>
+          <option value="Published">Published</option>
+          <option value="Archived">Archived</option>
+        </select>
+      </div>
+
+      <textarea id="ideaNotes" placeholder="Optional notes..." rows="3"></textarea>
+
+      <div class="form-actions">
+        <button id="saveIdeaBtn" class="btn primary">Add Idea</button>
+        <button id="cancelEditBtn" class="btn secondary hidden">Cancel Edit</button>
+      </div>
+    </section>
+
+<section class="filters">
+    <div class="filter-group">
+    <label>Type:</label>
+    <select id="filterType">
+        <option value="All">All</option>
+        <option value="Video">Video</option>
+        <option value="Blog">Blog</option>
+        <option value="Post">Post</option>
+    </select>
+</div>
+
+      <div class="filter-group">
+        <label>Status:</label>
+        <select id="filterStatus">
+          <option value="All">All</option>
+          <option value="Draft">Draft</option>
+          <option value="Published">Published</option>
+          <option value="Archived">Archived</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Ideas List -->
+    <section class="ideas-list" id="ideasList">
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

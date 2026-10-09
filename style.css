@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #CCFBFA, #B1E5E6, #F7ADAD);
+  color: #1e293b;
+  padding: 40px 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 2.1rem;
+  color: #e05c5c;              
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #64748b;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(242, 145, 145, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  margin-bottom: 25px;
+}
+
+.form-card h2 {
+  font-size: 1.25rem;
+  color: #e05c5c;
+  margin-bottom: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+input, select, textarea {
+  padding: 11px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 11px;
+  font-size: 0.95rem;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #F29191;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 11px 22px;
+  border-radius: 11px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.btn.primary {
+  background: #F29191;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #e07a7a;
+  transform: translateY(-1px);
+}
+
+.btn.secondary {
+  background: #F7ADAD;
+  color: #7f1d1d;
+}
+
+.btn.secondary:hover {
+  background: #f59a9a;
+}
+
+.hidden {
+  display: none;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #475569;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  min-width: 130px;
+  background: white;
+}
+
+.ideas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.idea-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.2s;
+}
+
+.idea-card:hover {
+  border-color: #F29191;
+  box-shadow: 0 6px 20px rgba(242, 145, 145, 0.15);
+}
+
+.idea-info h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.idea-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.badge.Video { background: #B1E5E6; color: #0e7490; }
+.badge.Blog { background: #F7ADAD; color: #9f1239; }
+.badge.Post { background: #CCFBFA; color: #0f766e; }
+
+.badge.Draft { background: #f1f5f9; color: #475569; }
+.badge.Published { background: #d1fae5; color: #047857; }
+.badge.Archived { background: #fee2e2; color: #b91c1c; }
+
+.idea-notes {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.idea-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background: #B1E5E6;
+  color: #0e7490;
+}
+
+.btn-edit:hover {
+  background: #9dd8d9;
+}
+
+.btn-delete {
+  background: #F7ADAD;
+  color: #9f1239;
+}
+
+.btn-delete:hover {
+  background: #f59a9a;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  border: 1px dashed #F29191;
+}
